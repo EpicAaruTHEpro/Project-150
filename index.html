@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+    <a-camera position = "0 10 20"></a-camera>
+      <a-assets timeout = "10000">
+          <a-asset-item id = "table-obj" src = "assets/tinker.obj"></a-asset-item>
+          <a-asset-item id = "fence" src = "./assets/wooden_fence/scene.gltf"></a-asset-item>
+          <a-asset-item id = "table-mtl" src = "assets/obj.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity obj-model = "obj: #table-obj; mtl: #table-mtl" position = "5 -5 0" rotation = "-90 0 0" scale = "0.1 0.1 0.1">
+      </a-entity>
+
+
+      <a-entity gltf-model = "#fence" position = "15 -5 -30" scale = "0.01 0.01 0.01" rotation = "0 90 0" ></a-entity>
+      <a-entity gltf-model = "#fence" position = "15 -5 -10" scale = "0.01 0.01 0.01" rotation = "0 90 0" ></a-entity>
+      <a-entity gltf-model = "#fence" position = "15 -5 10" scale = "0.01 0.01 0.01" rotation = "0 90 0" ></a-entity>
+      <a-entity gltf-model = "#fence" position = "15 -5 30" scale = "0.01 0.01 0.01" rotation = "0 90 0" ></a-entity>
+      
+      <a-sky color = "teal"></a-sky>
+    </a-scene>
+  </body>
+</html>
